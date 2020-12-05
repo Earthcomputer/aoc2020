@@ -3,6 +3,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 
 fn main() {
     let day = util::get_filtered_int_input("What day do you want to solve?", |i| i > 0 && i < 25);
@@ -27,6 +28,11 @@ fn main() {
             day4::run_hard()
         } else {
             day4::run_easy()
+        },
+        5 => if hard {
+            day5::run_hard()
+        } else {
+            day5::run_easy()
         }
         _ => panic!("Day {} not implemented", day)
     }
